@@ -18,10 +18,12 @@ DATABASES = {
     },
 }
 
-DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+STATICFILES_STORAGE = 'askdjango.storages.StaticAzureStorage'
+DEFAULT_FILE_STORAGE = 'askdjango.storages.MediaAzureStorage'
 
 # 설정 / 액세스 키
 AZURE_ACCOUNT_NAME = os.environ.get('AZURE_ACCOUNT_NAME', '')
 AZURE_ACCOUNT_KEY = os.environ.get('AZURE_ACCOUNT_KEY', '')
 AZURE_CONTAINER = os.environ.get('AZURE_CONTAINER', '')
+AZURE_MEDIA_CONTAINER = os.environ.get('AZURE_MEDIA_CONTAINER', '')
 

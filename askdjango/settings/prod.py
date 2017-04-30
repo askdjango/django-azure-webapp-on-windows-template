@@ -5,6 +5,8 @@ pymysql.install_as_MySQLdb()
 
 DEBUG = True  # FIXME: 배포 테스트 후에, 필히 옵션을 꺼주세요.
 
+ALLOWED_HOSTS = ['*']
+
 INSTALLED_APPS += ['storages']
 
 DATABASES = {
